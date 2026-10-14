@@ -1,0 +1,94 @@
+{
+  "title": "Norml Security",
+  "audience": "Users and assistants handling credentials",
+  "actsOn": "Protected credential stores and selected local files",
+  "pitch": "Keep secret values outside model-visible text and handle storage, exposure and local scanning through explicit scope.",
+  "problem": [
+    "Secrets can persist in command arguments, transcripts, config and backups even after a visible copy disappears.",
+    "This skill uses protected entry and local consumers, separates rotation from cleanup, and makes scanner coverage and limitations explicit."
+  ],
+  "commands": [
+    "API key",
+    "Keychain",
+    "Credential Manager",
+    "SSH key",
+    "MCP credentials",
+    "secret exposure",
+    "leak check",
+    "browser password migration"
+  ],
+  "flow": [
+    {
+      "t": "Resolve identity",
+      "d": "Verify provider, resource, existing store and allowed effects."
+    },
+    {
+      "t": "Enter securely",
+      "d": "Use a masked native prompt or supported provider auth."
+    },
+    {
+      "t": "Verify consumer",
+      "d": "Confirm identity and intended read without showing secret values."
+    },
+    {
+      "t": "Handle exposure",
+      "d": "Rotate/revoke and reconcile actual consumers when required."
+    },
+    {
+      "t": "Scan selected paths",
+      "d": "Report privately; redact only under reviewed opt-in scope."
+    }
+  ],
+  "skill": "norml-security",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true,
+  "architecture": {
+    "root": "norml-security/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Secret boundaries and workflow selection"
+      },
+      {
+        "path": "recipes/secure-entry-and-use.md",
+        "role": "macOS/Windows entry and in-memory use"
+      },
+      {
+        "path": "recipes/ssh-and-mcp.md",
+        "role": "Private-key and transport boundaries"
+      },
+      {
+        "path": "recipes/exposure-response.md",
+        "role": "Revocation, consumer update and cleanup"
+      },
+      {
+        "path": "scripts/add-secret-macos.swift",
+        "role": "Masked dialog plus native Keychain APIs"
+      },
+      {
+        "path": "scripts/secrets-sweep.py",
+        "role": "Explicit-path scanner and opt-in redaction"
+      },
+      {
+        "path": "qa/test-sweep.py",
+        "role": "Disposable input/preservation/CLI tests"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No Linux secret-store helper is shipped.",
+      "Windows helper needs an explicitly installed reviewed CredentialManager module and verification on Windows.",
+      "Scanner patterns do not cover every secret format, Git history, browser stores or cloud logs.",
+      "Private-key header findings are report-only; local deletion does not revoke credentials.",
+      "Original backups remain in separate private storage until cleanup is authorized; --report-dir selects reports only."
+    ]
+  },
+  "callout": {
+    "label": "Scope",
+    "text": "No Linux secret-store helper is shipped."
+  }
+}

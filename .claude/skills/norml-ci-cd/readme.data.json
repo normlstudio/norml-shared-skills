@@ -1,0 +1,110 @@
+{
+  "title": "Norml CI/CD",
+  "audience": "WordPress developers and project owners",
+  "actsOn": "Project deployment policy",
+  "pitch": "Choose and document how a WordPress project deploys, protects live data and recovers from failure.",
+  "problem": [
+    "A code deploy, a database promotion and a media sync can affect very different state. Treating them as one operation can overwrite live work.",
+    "This package records topology, data ownership, backups, permissions and exact verification before another operator ships."
+  ],
+  "commands": [
+    "Set up CI/CD for this WordPress project",
+    "Which deployment pattern applies here",
+    "Prepare staging-to-production policy",
+    "Create a theme-only local workspace contract",
+    "Set up the backup and restore strategy",
+    "Put this project in MVP mode"
+  ],
+  "flow": [
+    {
+      "t": "Discover",
+      "d": "Verify repository, environments and current authority."
+    },
+    {
+      "t": "Select",
+      "d": "Choose deployment, database and backup strategies."
+    },
+    {
+      "t": "Record",
+      "d": "Fill the project contract with exact supported commands."
+    },
+    {
+      "t": "Review",
+      "d": "Resolve target, recovery and permission blockers."
+    }
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Seven deployment patterns",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Local/staging/direct production and builder/legacy paths."
+      },
+      {
+        "name": "Four data strategies",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Live ownership, initial replacement and scoped migration."
+      },
+      {
+        "name": "Backup and MVP policy",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Recovery evidence and an explicit delivery-mode overlay."
+      },
+      {
+        "name": "Execute deployment",
+        "tag": "Outside scope",
+        "ok": false,
+        "desc": "This package prepares policy; it does not deploy."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-ci-cd/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Runtime selection and policy router"
+      },
+      {
+        "path": "recipes/deployment/",
+        "role": "Seven topology procedures"
+      },
+      {
+        "path": "recipes/database/",
+        "role": "Four data ownership/migration strategies"
+      },
+      {
+        "path": "recipes/backup/",
+        "role": "Managed/shared/VPS/cloud recovery patterns"
+      },
+      {
+        "path": "modes/mvp-mode.md",
+        "role": "Optional live-feedback delivery overlay"
+      },
+      {
+        "path": "templates/ci-cd.md",
+        "role": "Non-secret project contract"
+      },
+      {
+        "path": "standards/staging-pipeline.md",
+        "role": "Self-contained full CI/release/rollback guide"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No deployment execution or credentials issuance.",
+      "Provider APIs, plan entitlements and commands must be verified for the target.",
+      "Selecting a pattern grants no production or destructive-data authority."
+    ]
+  },
+  "skill": "norml-ci-cd",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

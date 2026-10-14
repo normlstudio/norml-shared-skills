@@ -1,0 +1,94 @@
+{
+  "title": "Norml Performance Audit",
+  "audience": "Developers investigating slow websites",
+  "actsOn": "Mobile/desktop measurements and source evidence",
+  "pitch": "Measure website performance and turn observed bottlenecks into specific, testable recommendations.",
+  "problem": [
+    "A performance score alone does not identify which asset, request or interaction causes the delay.",
+    "The package combines lab and available field evidence with HTTP/HTML and optional source inspection, then states what the data can support."
+  ],
+  "commands": [
+    "Run a performance audit of this URL",
+    "Why is this page slow",
+    "Investigate LCP or layout shifts",
+    "Check mobile and desktop loading",
+    "Inspect render-blocking resources",
+    "Compare performance before and after this change"
+  ],
+  "flow": [
+    {
+      "t": "Measure",
+      "d": "Collect both PSI strategies and label field/lab provenance."
+    },
+    {
+      "t": "Inspect",
+      "d": "Trace HTTP, assets, HTML and optional local source."
+    },
+    {
+      "t": "Prioritize",
+      "d": "Rank evidence-backed bottlenecks without invented gains."
+    },
+    {
+      "t": "Report",
+      "d": "Write specific fixes and comparable validation steps."
+    }
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Mobile/desktop audit",
+        "tag": "Read-only",
+        "ok": true,
+        "desc": "PSI, HTTP timing, resources and source inspection."
+      },
+      {
+        "name": "Field/lab distinction",
+        "tag": "Evidence",
+        "ok": true,
+        "desc": "CrUX provenance and honest unavailable measurements."
+      },
+      {
+        "name": "Prioritized report",
+        "tag": "Markdown",
+        "ok": true,
+        "desc": "Specific fixes tied to resources and verification."
+      },
+      {
+        "name": "Guaranteed improvements",
+        "tag": "Unsupported",
+        "ok": false,
+        "desc": "No promised scores, ranking or timing gains."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-performance-audit/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Read-only audit pipeline and scope"
+      },
+      {
+        "path": "procedures/collect-evidence.md",
+        "role": "PSI/HTTP/resource collection and metric interpretation"
+      },
+      {
+        "path": "templates/performance-audit.md",
+        "role": "Measured findings, fixes and validation template"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "PSI can be quota limited and CrUX may lack samples.",
+      "Lab TBT/FID do not become field INP.",
+      "No tool installation, paid usage or fixes occur implicitly."
+    ]
+  },
+  "skill": "norml-performance-audit",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

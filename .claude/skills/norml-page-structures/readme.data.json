@@ -1,0 +1,100 @@
+{
+  "skill": "norml-page-structures",
+  "title": "Norml Page Structures",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "audience": "Website developers and designers",
+  "actsOn": "Page and block contracts",
+  "pitch": "Plan page elements and editing fields from a complete reusable page/block catalog.",
+  "problem": [
+    "A template can look finished while missing required content, navigation or editor fields.",
+    "This catalog makes structure, content slots and conditional requirements explicit before building."
+  ],
+  "flow": [
+    {
+      "t": "Select",
+      "d": "Read matching page, archetype and blocks."
+    },
+    {
+      "t": "Map",
+      "d": "Record requirement levels, slots and overrides."
+    },
+    {
+      "t": "Build",
+      "d": "Implement with the project design system."
+    },
+    {
+      "t": "Verify",
+      "d": "Test real content, editor and responsive behavior."
+    }
+  ],
+  "commands": [
+    "What elements belong on this page?",
+    "Check missing page elements",
+    "Plan a blog single and archive",
+    "Choose a block variant"
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Page specifications",
+        "tag": "included",
+        "ok": true,
+        "desc": "16 linked page specifications preserve ordered elements and conditional defaults."
+      },
+      {
+        "name": "Block contracts",
+        "tag": "included",
+        "ok": true,
+        "desc": "43 blocks include slot/data shapes, implementation choices and variants."
+      },
+      {
+        "name": "Variant acceptance",
+        "tag": "included",
+        "ok": true,
+        "desc": "Stable IDs, source version, use/avoid conditions and runtime coverage."
+      },
+      {
+        "name": "Bio archetype",
+        "tag": "included",
+        "ok": true,
+        "desc": "Text-only layout/ACF field contract without client screenshots."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-page-structures/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Runtime reading and coverage router."
+      },
+      {
+        "path": "catalogs/pages.md",
+        "role": "Discover 16 page specifications."
+      },
+      {
+        "path": "catalogs/blocks.md",
+        "role": "Discover 43 block specifications."
+      },
+      {
+        "path": "catalogs/variant-contract.md",
+        "role": "Selection and adapter boundaries."
+      },
+      {
+        "path": "qa/toc-required.md",
+        "role": "Actual blog-navigation acceptance."
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "Does not contain target framework code or a visual design system.",
+      "Cannot invent missing content, evidence, assets or integration behavior.",
+      "Defaults may be overridden by an explicit recorded project decision."
+    ]
+  },
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

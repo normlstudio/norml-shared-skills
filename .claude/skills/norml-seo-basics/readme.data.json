@@ -1,0 +1,116 @@
+{
+  "skill": "norml-seo-basics",
+  "title": "Norml SEO Basics",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "audience": "Website owners and developers",
+  "actsOn": "Public-site launch baseline",
+  "pitch": "Audit or fix a website’s SEO launch baseline with dependency-aware recipes and live evidence.",
+  "problem": [
+    "A saved setting can fail to produce the expected public metadata, sitemap or tag behavior.",
+    "One output owner, recipe-specific checks and immutable reports make the baseline reviewable."
+  ],
+  "flow": [
+    {
+      "t": "Resolve",
+      "d": "Verify target, platform and existing owners."
+    },
+    {
+      "t": "Select",
+      "d": "Expand selected recipe dependencies."
+    },
+    {
+      "t": "Assess",
+      "d": "Gather public, runtime, browser and source evidence."
+    },
+    {
+      "t": "Apply",
+      "d": "Fix only explicitly requested mutable recipes."
+    },
+    {
+      "t": "Verify",
+      "d": "Run acceptance and save the report."
+    }
+  ],
+  "commands": [
+    "Run through SEO basics",
+    "Set up SEO basics",
+    "Connect Search Console",
+    "Check Google Analytics",
+    "Check for 404s"
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Recipe catalog",
+        "tag": "included",
+        "ok": true,
+        "desc": "15 recipes cover launch metadata, search properties, tags, assets and WordPress specifics."
+      },
+      {
+        "name": "Audit/fix modes",
+        "tag": "included",
+        "ok": true,
+        "desc": "Read-only is the default for run-through/check requests."
+      },
+      {
+        "name": "HTTP validator",
+        "tag": "included",
+        "ok": true,
+        "desc": "Source/asset/schema/sitemap checks for the WordPress baseline profile."
+      },
+      {
+        "name": "Current reporting",
+        "tag": "included",
+        "ok": true,
+        "desc": "Immutable full report plus one latest-state index."
+      },
+      {
+        "name": "Rank Math preservation",
+        "tag": "included",
+        "ok": true,
+        "desc": "The configuration template retains existing active modules and adds baseline modules idempotently."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-seo-basics/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Mode selection and recipe matrix."
+      },
+      {
+        "path": "recipes/",
+        "role": "One concern, ownership and rollback per file."
+      },
+      {
+        "path": "processes/",
+        "role": "Analyze-only and analyze-and-fix execution."
+      },
+      {
+        "path": "standards/access-and-safety.md",
+        "role": "Portable authentication and target boundaries."
+      },
+      {
+        "path": "scripts/validate-baseline.mjs",
+        "role": "Public HTTP/source profile checks."
+      },
+      {
+        "path": "templates/baseline-report.md",
+        "role": "Immutable evidence and recipe outcomes."
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "GA is presence-only; no property, stream, tag or version provisioning.",
+      "404 discovery is check-only; candidates require separate remediation review.",
+      "No keyword research, full technical audit or legal/privacy decisions.",
+      "Requires authorized platform/provider access for selected mutations."
+    ]
+  },
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

@@ -1,0 +1,119 @@
+{
+  "title": "Norml WordPress Developer",
+  "audience": "WordPress engineers maintaining new or inherited themes",
+  "actsOn": "Theme source, editor components and release workflow",
+  "pitch": "Build WordPress themes with explicit content architecture, reusable components, editor previews and verified releases.",
+  "problem": [
+    "A new stack needs a coherent authoring and release workflow. An inherited theme needs changes that respect its existing architecture.",
+    "The package supplies both paths and separates code/schema deployment from live content ownership."
+  ],
+  "commands": [
+    "Create a new WordPress theme",
+    "Work on this inherited non-Sage theme",
+    "Add a block with an editor preview",
+    "Build a reusable Blade component",
+    "Review the CSS architecture",
+    "Set up WordPress CI and staging-to-production gates"
+  ],
+  "flow": [
+    {
+      "t": "Inspect",
+      "d": "Verify model, stack, roots and current policy."
+    },
+    {
+      "t": "Choose path",
+      "d": "Use Sage standards or retain the inherited architecture."
+    },
+    {
+      "t": "Build",
+      "d": "Compose content boundaries, components and editor previews."
+    },
+    {
+      "t": "Verify",
+      "d": "Run relevant checks, responsive review and antipattern audit."
+    },
+    {
+      "t": "Release",
+      "d": "Use the approved exact-source deployment and recovery policy."
+    }
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "New Sage engineering",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Acorn/Blade/Tailwind/Vite guidance with project version checks."
+      },
+      {
+        "name": "Inherited theme changes",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Match current templates, ACF/native blocks and compiler."
+      },
+      {
+        "name": "Editor and CSS standards",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Block previews, reusable components and three CSS layers."
+      },
+      {
+        "name": "CI and QA",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "PR/staging/production gates and rollback rules."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-wp-developer/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Two-path developer router"
+      },
+      {
+        "path": "standards/inherited-projects.md",
+        "role": "Respect/refactor decisions and framework-independent patterns"
+      },
+      {
+        "path": "standards/sage-framework.md",
+        "role": "Sage/Acorn/Blade/Vite foundation"
+      },
+      {
+        "path": "standards/acf-blocks.md",
+        "role": "Metadata and legacy blocks with preview acceptance"
+      },
+      {
+        "path": "standards/css-design-system.md",
+        "role": "Tokens/components/block layout and responsive checks"
+      },
+      {
+        "path": "standards/ci-cd.md",
+        "role": "Standalone release, artifact and rollback procedure"
+      },
+      {
+        "path": "standards/qa-gates.md",
+        "role": "Pre-merge, pre-deploy and post-deploy checks"
+      },
+      {
+        "path": "standards/antipatterns/",
+        "role": "Auditable implementation bans and fixes"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "Project access, compatible runtime and optional ACF PRO licensing are supplied by the user.",
+      "Not a turnkey installer/deployer; samples must be adapted and verified.",
+      "No silent inherited framework/builder replacement or automatic production data overwrite.",
+      "UI/CI/provider examples are not live-executed by installing this package."
+    ]
+  },
+  "skill": "norml-wp-developer",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

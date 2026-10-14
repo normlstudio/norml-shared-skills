@@ -1,0 +1,90 @@
+{
+  "title": "Norml Changelog",
+  "audience": "Developers preserving project decisions across sessions",
+  "actsOn": "Project changelog and architecture Markdown",
+  "pitch": "Record verified changes and decisions so future developers can understand the current project state.",
+  "problem": [
+    "Recent commits and chat context do not automatically preserve why a decision was made.",
+    "The package updates existing project records and compresses older routine entries while retaining durable decisions, security fixes and breaking changes."
+  ],
+  "commands": [
+    "Log this development change",
+    "Update the changelog",
+    "Record this architecture decision",
+    "What changed in this session",
+    "Update integration documentation",
+    "Compress the older routine changelog entries"
+  ],
+  "flow": [
+    {
+      "t": "Gather",
+      "d": "Read existing docs and verified diffs/session evidence."
+    },
+    {
+      "t": "Log",
+      "d": "Merge same-day changes and preserve tagged decisions."
+    },
+    {
+      "t": "Reconcile",
+      "d": "Update current architecture and applicable migration status."
+    },
+    {
+      "t": "Confirm",
+      "d": "Report changed files and any compression."
+    }
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Verified change log",
+        "tag": "Markdown",
+        "ok": true,
+        "desc": "Dated entries grouped by area with rationale."
+      },
+      {
+        "name": "Decision cache",
+        "tag": "Durable",
+        "ok": true,
+        "desc": "Current architecture and superseded-choice history."
+      },
+      {
+        "name": "Older routine compression",
+        "tag": "Bounded",
+        "ok": true,
+        "desc": "Protect decisions, integrations and security/breaking changes."
+      },
+      {
+        "name": "Publish or commit",
+        "tag": "Separate authority",
+        "ok": false,
+        "desc": "Logging alone does not authorize distribution."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-changelog/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Gather/log/reconcile procedure"
+      },
+      {
+        "path": "templates/changelog-format.md",
+        "role": "Entry examples and compression rules"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "Never treats planned work as completed or invents estimates.",
+      "Preserves other authors and concurrent updates.",
+      "No automatic commits, notifications or external publishing."
+    ]
+  },
+  "skill": "norml-changelog",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

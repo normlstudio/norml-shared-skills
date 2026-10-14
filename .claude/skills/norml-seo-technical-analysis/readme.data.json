@@ -1,0 +1,106 @@
+{
+  "skill": "norml-seo-technical-analysis",
+  "title": "Norml SEO Technical Analysis",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "audience": "Technical SEOs and website owners",
+  "actsOn": "Site-wide technical findings",
+  "pitch": "Audit eight technical SEO areas and produce a prioritized report with explicit evidence and coverage.",
+  "problem": [
+    "A score or sampled crawl can hide unavailable checks and unverified site-wide assumptions.",
+    "The audit records exact coverage, measured findings and blocked sources in six report sections."
+  ],
+  "flow": [
+    {
+      "t": "Scope",
+      "d": "Confirm host, CMS, locales and crawl boundary."
+    },
+    {
+      "t": "Collect",
+      "d": "Use authorized crawler/provider and public evidence."
+    },
+    {
+      "t": "Audit",
+      "d": "Assess all eight technical areas."
+    },
+    {
+      "t": "Prioritize",
+      "d": "Rank by severity, reach and dependencies."
+    },
+    {
+      "t": "Report",
+      "d": "Save all six sections with gaps and evidence."
+    }
+  ],
+  "commands": [
+    "Run a technical SEO audit",
+    "Audit indexation and canonicals",
+    "Check Core Web Vitals",
+    "Review hreflang",
+    "Find broken URLs"
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Eight areas",
+        "tag": "included",
+        "ok": true,
+        "desc": "Indexation, speed, metadata, schema, mobile, linking, international and serving."
+      },
+      {
+        "name": "Six report sections",
+        "tag": "included",
+        "ok": true,
+        "desc": "Summary, crawl, speed, meta, schema and unified findings."
+      },
+      {
+        "name": "Evidence discipline",
+        "tag": "included",
+        "ok": true,
+        "desc": "Separate lab/field, URL/origin and live/indexed observations."
+      },
+      {
+        "name": "Limited tooling",
+        "tag": "included",
+        "ok": true,
+        "desc": "Representative public checks with explicitly partial coverage."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-seo-technical-analysis/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Scope, audit and reporting router."
+      },
+      {
+        "path": "processes/eight-area-audit.md",
+        "role": "Detailed technical check catalog."
+      },
+      {
+        "path": "standards/evidence.md",
+        "role": "Coverage and measurement interpretation."
+      },
+      {
+        "path": "templates/technical-report.md",
+        "role": "Six report sections and evidence columns."
+      },
+      {
+        "path": "qa/acceptance.md",
+        "role": "Completion and honesty gate."
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "Read-only; no website/provider mutation or deployments.",
+      "No invented health score, hours, cost or named assignees.",
+      "A sample cannot establish complete crawl/inlink/orphan coverage.",
+      "Provider failures remain blocked checks, not guessed data."
+    ]
+  },
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

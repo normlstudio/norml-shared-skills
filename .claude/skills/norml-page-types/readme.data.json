@@ -1,0 +1,104 @@
+{
+  "skill": "norml-page-types",
+  "title": "Norml Page Types",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "audience": "Website architects and developers",
+  "actsOn": "Website families and destination relationships",
+  "pitch": "Choose coherent page families, canonical routes and eligible intersections before making a sitemap.",
+  "problem": [
+    "A list of URLs can hide unclear entity ownership or produce hundreds of near-duplicate pages.",
+    "Family/member contracts distinguish hubs, singles, categories, utilities and real relationship pages."
+  ],
+  "flow": [
+    {
+      "t": "Match",
+      "d": "Read the index and selected family contracts."
+    },
+    {
+      "t": "Evaluate",
+      "d": "Choose include, embed, defer or omit."
+    },
+    {
+      "t": "Gate",
+      "d": "Verify intersection identity and useful differences."
+    },
+    {
+      "t": "Hand off",
+      "d": "Record sources, routes, roles and unknowns."
+    }
+  ],
+  "commands": [
+    "What page types should this site have?",
+    "Suggest website architecture",
+    "Plan industry and service intersections",
+    "Add a page type"
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Family catalog",
+        "tag": "included",
+        "ok": true,
+        "desc": "33 families with linked member specifications and fit/skip rules."
+      },
+      {
+        "name": "Canonical relationships",
+        "tag": "included",
+        "ok": true,
+        "desc": "Separate navigation, route, entity and CMS hierarchy."
+      },
+      {
+        "name": "Intersection gates",
+        "tag": "included",
+        "ok": true,
+        "desc": "Evidence and maintainable unique content before page multiplication."
+      },
+      {
+        "name": "Extension templates",
+        "tag": "included",
+        "ok": true,
+        "desc": "Family/member templates with index and acceptance rules."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-page-types/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Selection and handoff router."
+      },
+      {
+        "path": "index.md",
+        "role": "Complete family/member discovery."
+      },
+      {
+        "path": "page-types/",
+        "role": "One flat member collection per family."
+      },
+      {
+        "path": "standards/architecture.md",
+        "role": "Identity, hierarchy and intersection rules."
+      },
+      {
+        "path": "templates/family.md",
+        "role": "Source-backed catalog extension shape."
+      },
+      {
+        "path": "qa/catalog-cases.md",
+        "role": "Matching and extension cases."
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No CMS writes, live routes, implementation or deployment.",
+      "Does not prescribe visual tokens or block order.",
+      "Proposed, approved-planned and observed pages remain distinct."
+    ]
+  },
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

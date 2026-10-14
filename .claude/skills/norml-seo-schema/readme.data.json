@@ -1,0 +1,109 @@
+{
+  "skill": "norml-seo-schema",
+  "title": "Norml SEO Schema",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "audience": "WordPress developers and technical SEOs",
+  "actsOn": "JSON-LD and dynamic field mappings",
+  "pitch": "Generate truthful WordPress structured data with dynamic field maps, PHP handoffs and local validation.",
+  "problem": [
+    "Hardcoded JSON-LD can drift from content, duplicate plugin output or claim facts that do not exist.",
+    "A reviewed field map and one output owner keep the graph tied to real data."
+  ],
+  "flow": [
+    {
+      "t": "Inspect",
+      "d": "Identify current output owners and actual query roles."
+    },
+    {
+      "t": "Map",
+      "d": "Select entities and dynamic property sources."
+    },
+    {
+      "t": "Prepare",
+      "d": "Produce handoff, JSON-LD and conditional PHP."
+    },
+    {
+      "t": "Validate",
+      "d": "Check actual output and current feature eligibility."
+    },
+    {
+      "t": "Monitor",
+      "d": "Inspect live output and optional indexed GSC data."
+    }
+  ],
+  "commands": [
+    "Generate schema for this page",
+    "Audit this JSON-LD",
+    "Wire schema into this WordPress theme",
+    "Map Product schema to ACF"
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Type contracts",
+        "tag": "included",
+        "ok": true,
+        "desc": "Nine schema files cover eleven core types plus article/local variants."
+      },
+      {
+        "name": "PHP mappings",
+        "tag": "included",
+        "ok": true,
+        "desc": "Complete reusable core/ACF field maps and conditional integration examples."
+      },
+      {
+        "name": "Advisory checks",
+        "tag": "included",
+        "ok": true,
+        "desc": "Node validator reads HTML/URL JSON-LD without npm dependencies."
+      },
+      {
+        "name": "Indexed inspection",
+        "tag": "included",
+        "ok": true,
+        "desc": "Optional provider-authenticated Search Console helper."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-seo-schema/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Audit/generate and integration router."
+      },
+      {
+        "path": "schemas/",
+        "role": "Per-type fields, mappings and PHP examples."
+      },
+      {
+        "path": "standards/eligibility.md",
+        "role": "Current vocabulary/search-feature distinctions."
+      },
+      {
+        "path": "templates/schema-handoff.md",
+        "role": "Developer handoff and evidence table."
+      },
+      {
+        "path": "scripts/validate-schema.mjs",
+        "role": "Local advisory validation."
+      },
+      {
+        "path": "scripts/gsc-inspect.py",
+        "role": "Optional authorized indexed inspection."
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No guaranteed rich result, knowledge panel, ranking or immediate indexing.",
+      "ACF examples need ACF or an approved guarded alternative.",
+      "Local validation is not full Schema.org/Google policy validation.",
+      "GSC inspection reports the indexed version, not a live test."
+    ]
+  },
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

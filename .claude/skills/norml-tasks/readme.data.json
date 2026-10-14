@@ -1,0 +1,93 @@
+{
+  "title": "Norml Tasks",
+  "audience": "Project owners and assistants",
+  "actsOn": "File-native planning workspaces",
+  "pitch": "Turn original requests into prioritized task files, executable milestone plans and verified resume state.",
+  "problem": [
+    "Thought dumps mix outcomes, ideas, decisions and work. A long index can hide the original request and make later sessions repeat or misread it.",
+    "This skill preserves exact sources, keeps one file per task, and records the checks that establish completion."
+  ],
+  "commands": [
+    "organize these thoughts",
+    "capture tasks",
+    "prioritize",
+    "plan a project",
+    "resume",
+    "park",
+    "verify phase",
+    "synchronize GitHub issues"
+  ],
+  "flow": [
+    {
+      "t": "Locate",
+      "d": "Read owner context and every known mapped planning surface."
+    },
+    {
+      "t": "Preserve source",
+      "d": "Capture exact wording, language, identity and later corrections."
+    },
+    {
+      "t": "Organize",
+      "d": "Deduplicate, connect goals and rank bounded actions."
+    },
+    {
+      "t": "Plan and execute",
+      "d": "Use quick tasks or phases; execute only requested work."
+    },
+    {
+      "t": "Verify and resume",
+      "d": "Record evidence, rebuild index and leave one next action."
+    }
+  ],
+  "skill": "norml-tasks",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true,
+  "architecture": {
+    "root": "norml-tasks/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Storage/depth/action router"
+      },
+      {
+        "path": "recipes/capture-and-prioritize.md",
+        "role": "Source-backed capture and ordering"
+      },
+      {
+        "path": "recipes/plan-milestone.md",
+        "role": "Phase plan, execution and verification"
+      },
+      {
+        "path": "schemas/task-record.md",
+        "role": "Stable task identity and required sections"
+      },
+      {
+        "path": "standards/github-mirroring.md",
+        "role": "Optional conflict-aware issue reconciliation"
+      },
+      {
+        "path": "scripts/planning.py",
+        "role": "Structural validator and derived index"
+      },
+      {
+        "path": "qa/test-planning.py",
+        "role": "Isolated integrity and stale-write checks"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "Capture/priority does not authorize implementation, publishing or spending.",
+      "The structural helper does not verify domain acceptance or synchronize GitHub.",
+      "GitHub is optional and disabled until configured and authorized.",
+      "Cross-owner dependencies require current evidence from their actual owner."
+    ]
+  },
+  "callout": {
+    "label": "Scope",
+    "text": "Capture/priority does not authorize implementation, publishing or spending."
+  }
+}

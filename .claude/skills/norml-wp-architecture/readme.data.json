@@ -1,0 +1,110 @@
+{
+  "title": "Norml WordPress Architecture",
+  "audience": "WordPress developers, architects and project owners",
+  "actsOn": "Content model and routing specification",
+  "pitch": "Choose the WordPress content model, routes and registration ownership before implementation.",
+  "problem": [
+    "A repeatable collection built as separate Pages loses automatic archives, filters and a reusable layout.",
+    "The package distinguishes content identity, classification, structured attributes and presentation before a builder creates the wrong primitive."
+  ],
+  "commands": [
+    "Should this be a custom post type or a page",
+    "Do we need a taxonomy",
+    "Plan the case-study archive and single URLs",
+    "Where should this code live",
+    "Audit the inherited WordPress content model",
+    "Map this model to Elementor or Sage"
+  ],
+  "flow": [
+    {
+      "t": "Discover",
+      "d": "Read existing types, taxonomies and ownership."
+    },
+    {
+      "t": "Decide",
+      "d": "Choose primitives, classification and typed fields."
+    },
+    {
+      "t": "Route",
+      "d": "Specify archive/single URLs and template slots."
+    },
+    {
+      "t": "Hand off",
+      "d": "Record registration ownership and rendering spec."
+    }
+  ],
+  "capabilities": {
+    "items": [
+      {
+        "name": "Model decisions",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Pages/posts/CPTs, taxonomy versus attributes and options."
+      },
+      {
+        "name": "URL/template planning",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Route bases, collisions, hierarchy and rewrite flush."
+      },
+      {
+        "name": "Code ownership",
+        "tag": "Bundled",
+        "ok": true,
+        "desc": "Plugin/theme/child/mu-plugin portability tradeoffs."
+      },
+      {
+        "name": "Write production theme code",
+        "tag": "Outside scope",
+        "ok": false,
+        "desc": "Outputs a specification, then the build workflow implements it."
+      }
+    ]
+  },
+  "architecture": {
+    "root": "norml-wp-architecture/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Architecture pre-check and routing"
+      },
+      {
+        "path": "standards/content-model.md",
+        "role": "WordPress primitives and field decisions"
+      },
+      {
+        "path": "standards/decision-trees.md",
+        "role": "Named nouns and three fast decision trees"
+      },
+      {
+        "path": "standards/urls-and-templates.md",
+        "role": "Routes, hierarchy and collision rules"
+      },
+      {
+        "path": "standards/code-placement.md",
+        "role": "Registration ownership and portability"
+      },
+      {
+        "path": "standards/builders-on-top.md",
+        "role": "Builder-neutral implementation handoff"
+      },
+      {
+        "path": "templates/architecture-spec.md",
+        "role": "Short durable output specification"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "Does not implement templates, register live types or migrate content.",
+      "Existing registrations and knowing user overrides must be respected.",
+      "ACF/storage behavior must be verified instead of assuming theme-switch outcomes."
+    ]
+  },
+  "skill": "norml-wp-architecture",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true
+}

@@ -1,0 +1,59 @@
+{
+  "skill": "norml-drive",
+  "title": "Norml Drive",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "pitch": "Edit native Google files from live IDs with fresh state and verified changes.",
+  "problem": [
+    "Existing logins and file names do not prove the intended account can operate the intended target.",
+    "This package checks exact identity and resource state before continuing."
+  ],
+  "commands": [
+    "Update this Google Sheet",
+    "Create a native Google Doc",
+    "Inspect this document\u2019s tabs"
+  ],
+  "architecture": {
+    "root": "norml-drive/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Runtime router"
+      },
+      {
+        "path": "recipes/",
+        "role": "Concrete operating procedures"
+      },
+      {
+        "path": "standards/",
+        "role": "Safety and authentication boundaries"
+      },
+      {
+        "path": "scripts/",
+        "role": "Bundled helpers"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No automatic production mutations or paid tests.",
+      "Provider account access must be verified on the recipient\u2019s machine."
+    ]
+  },
+  "generated": "2026-10-13",
+  "hasHumanMd": true,
+  "capabilities": {
+    "items": [
+      {
+        "name": "Native Sheets",
+        "ok": true,
+        "desc": "Versioned typed snapshots, exact ranges and staleness checks."
+      },
+      {
+        "name": "Native Docs",
+        "ok": true,
+        "desc": "Exact tab/table selection and revision-protected UTF-16 edits."
+      }
+    ]
+  }
+}

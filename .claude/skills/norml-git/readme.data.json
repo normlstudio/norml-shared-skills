@@ -1,0 +1,89 @@
+{
+  "title": "Norml Git",
+  "audience": "Developers and assistants",
+  "actsOn": "Git repositories and worktrees",
+  "pitch": "Make clear commits, preserve shared work, synchronize authorized remotes, and manage worktrees safely.",
+  "problem": [
+    "A shared working tree can contain several people\u2019s unfinished changes. A blanket commit or cleanup can lose ownership and local-only work.",
+    "This skill inspects history and actual files before changes, stages exact scope, and preserves evidence through synchronization and cleanup."
+  ],
+  "commands": [
+    "commit this",
+    "push my changes",
+    "pull latest",
+    "audit worktrees",
+    "create an isolated checkout",
+    "clean up merged worktrees",
+    "claim task",
+    "resolve a Git conflict"
+  ],
+  "flow": [
+    {
+      "t": "Inspect",
+      "d": "Read instructions, status, history, remote identity and permissions."
+    },
+    {
+      "t": "Bound the change",
+      "d": "Identify owned files and group commits by rationale."
+    },
+    {
+      "t": "Validate",
+      "d": "Scan actual staged content and run applicable checks."
+    },
+    {
+      "t": "Commit or synchronize",
+      "d": "Apply only requested effects and verify the resulting SHA."
+    },
+    {
+      "t": "Preserve handoff",
+      "d": "Retire a checkout only after history, file and consumer gates."
+    }
+  ],
+  "skill": "norml-git",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true,
+  "architecture": {
+    "root": "norml-git/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Operation router and authorization boundaries"
+      },
+      {
+        "path": "recipes/project-repositories.md",
+        "role": "Commit and synchronize workflow"
+      },
+      {
+        "path": "recipes/worktree-lifecycle.md",
+        "role": "Local-file/history/consumer preservation"
+      },
+      {
+        "path": "recipes/task-ownership.md",
+        "role": "Optional shared-claim protocol"
+      },
+      {
+        "path": "scripts/task_claims.py",
+        "role": "Fast-forward remote coordination helper"
+      },
+      {
+        "path": "qa/test_task_claims.py",
+        "role": "Real disposable-remote race checks"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No automatic push, deployment or repository sweep.",
+      "The shared-claim adapter supports GitHub and isolated local test remotes; core Git/worktree procedures support other Git hosts.",
+      "Claims are cooperative bookkeeping, not editor or filesystem enforcement.",
+      "Merged history alone does not make a checkout disposable."
+    ]
+  },
+  "callout": {
+    "label": "Scope",
+    "text": "No automatic push, deployment or repository sweep."
+  }
+}

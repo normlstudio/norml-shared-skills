@@ -1,0 +1,91 @@
+{
+  "title": "Norml Skill Creator",
+  "audience": "Skill authors and assistants",
+  "actsOn": "User-owned skill packages",
+  "pitch": "Build source-backed skills with clear audience, portable structure, truthful docs and verified discovery.",
+  "problem": [
+    "A copied folder can retain private paths, dependencies and data. A polished guide can also promise behavior that the source never implemented.",
+    "This skill classifies ownership and sharing scope, preserves original sources, and verifies actual procedures before claiming readiness."
+  ],
+  "commands": [
+    "create a skill",
+    "scaffold a skill",
+    "build a client skill set",
+    "where should this skill live",
+    "migrate existing skills",
+    "prepare skills for sharing"
+  ],
+  "flow": [
+    {
+      "t": "Inspect scope",
+      "d": "Resolve audience, intent, source owner and adjacent skills."
+    },
+    {
+      "t": "Choose recipe",
+      "d": "Select shared, internal, client, product or public packaging."
+    },
+    {
+      "t": "Author source",
+      "d": "Write grounded procedures, failures and acceptance checks."
+    },
+    {
+      "t": "Document and verify",
+      "d": "Check links, boundaries, scripts and truthful human docs."
+    },
+    {
+      "t": "Install or publish",
+      "d": "Execute these separate effects only when requested."
+    }
+  ],
+  "skill": "norml-skill-creator",
+  "version": "1.0.0",
+  "repo": "norml-shared-skills",
+  "covers": "1.0.0",
+  "generated": "2026-10-13",
+  "hasHumanMd": true,
+  "architecture": {
+    "root": "norml-skill-creator/",
+    "items": [
+      {
+        "path": "SKILL.md",
+        "role": "Audience/action routing and completion contract"
+      },
+      {
+        "path": "recipes/index.md",
+        "role": "Creation scope selection"
+      },
+      {
+        "path": "recipes/prepare-public-skill.md",
+        "role": "Include/rewrite/omit public boundary"
+      },
+      {
+        "path": "recipes/migrate-existing-skill.md",
+        "role": "Source hashes, preservation and cutover"
+      },
+      {
+        "path": "processes/create-and-verify.md",
+        "role": "Grounded build and discovery lifecycle"
+      },
+      {
+        "path": "standards/package-structure.md",
+        "role": "Semantic anatomy and source/doc roles"
+      },
+      {
+        "path": "qa/creation-contract.md",
+        "role": "Evidence-based readiness gates"
+      }
+    ]
+  },
+  "limits": {
+    "items": [
+      "No mandatory company registry, cloud drive or host organization.",
+      "Scaffolds are explicitly incomplete.",
+      "Package creation does not authorize remote creation, visibility change, runtime installation or website release.",
+      "Live transactions are not migration verification fixtures."
+    ]
+  },
+  "callout": {
+    "label": "Scope",
+    "text": "No mandatory company registry, cloud drive or host organization."
+  }
+}
